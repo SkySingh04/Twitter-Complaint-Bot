@@ -6,11 +6,11 @@ from selenium.webdriver.common.by import By
 class SpeedBot():
     def __init__(self):
         #ENTER THE UPLOAD SPEED PROMISED BY YOUR PROVIDER
-        self.Promised_Up=""
+        self.Promised_Up=100.00
         #ENTER THE DOWNLOAD SPEED PROMISED BY YOUR PROVIDER
-        self.Promised_Down=""
+        self.Promised_Down=100.00
         #ENTER THE PATH TO YOUR CHROME DRIVER
-        chrome_driver_path= r"C:\Users\ACA$H\Desktop\CONFIDENTIAL\Selenium Driver\chromedriver.exe."
+        chrome_driver_path= r"C:\Users\User\Selenium Driver\chromedriver.exe."
         service = Service(chrome_driver_path)
         self.driver = webdriver.Chrome(service=service)
 
@@ -31,12 +31,12 @@ class SpeedBot():
         time.sleep(3)
         username= self.driver.find_element(By.NAME,"text")
         #ENTER YOUR USERNAME
-        username.send_keys("")
+        username.send_keys("example")
         username.send_keys(Keys.ENTER)
         time.sleep(2)
         password = self.driver.find_element(By.NAME,"password")
         #ENTER YOUR PASSWORD
-        password.send_keys("")
+        password.send_keys("1234")
         password.send_keys(Keys.ENTER)
         time.sleep(5)
         tweet = f'''My ISP! WHY IS MY INTERNET ONLY {self.actual_download}mbps DOWN/{self.actual_upload}mbps UP
